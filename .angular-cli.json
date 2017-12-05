@@ -7,10 +7,7 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
+      "assets": ["assets", "favicon.ico"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -21,6 +18,8 @@
       "styles": [
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "../scss/bootstrap/bootstrap.scss",
+        "../node_modules/primeng/resources/primeng.css",
+        "../node_modules/primeng/resources/themes/bootstrap/theme.css",
         "../scss/mdb-free.scss",
         "./styles.scss"
       ],
@@ -60,8 +59,7 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "component": {
-    }
+    "component": {}
   },
   "warnings": {
     "typescriptMismatch": false

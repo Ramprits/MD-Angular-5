@@ -3,6 +3,7 @@ import { GetTraining } from "./training.model";
 import { TrackerError } from "../../shared/tracker.error";
 import { TrainingService } from "./training.service";
 import { Title } from "@angular/platform-browser";
+import { Router } from "@angular/router";
 
 @Component({
   templateUrl: "training-list.component.html"
@@ -12,7 +13,11 @@ export class TrainingListComponent implements OnInit {
   loading = false;
   checked = false;
   isFree = false;
-  constructor(private trainingService: TrainingService, private title: Title) {
+  constructor(
+    private trainingService: TrainingService,
+    private title: Title,
+    private router: Router
+  ) {
     this.title.setTitle("Training List");
   }
 
@@ -36,5 +41,7 @@ export class TrainingListComponent implements OnInit {
     );
   }
 
-  addTraining() {}
+  addTraining() {
+    this.router.navigate(["/training/addTraining"]);
+  }
 }

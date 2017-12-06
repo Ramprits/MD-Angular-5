@@ -1,0 +1,74 @@
+<form [formGroup]="AddTraining" (ngSubmit)="onSubmit(AddTraining.value)">
+  <p-panel header="New Training">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2">
+          Training Name
+          <em class="text-danger">*</em>:
+        </div>
+        <div class="ui-grid-col-4">
+          <input pInputText type="text" formControlName="name" placeholder="Training Name..." />
+        </div>
+        <div class="ui-grid-col-4">
+          <!-- <b-fielderrors [form]="AddTraining" field="name" nicename="Training Name"> </b-fielderrors> -->
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2">
+          Description
+          <em class="text-danger">*</em>:
+        </div>
+        <div class="ui-grid-col-4">
+          <input pInputText type="text" formControlName="description" placeholder="Description..." />
+        </div>
+        <div class="ui-grid-col-4">
+          <!-- <b-fielderrors [form]="AddTraining" field="name" nicename="Training Name"> </b-fielderrors> -->
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2">
+          Average Cost
+          <em class="text-danger">*</em>:
+        </div>
+        <div class="ui-grid-col-4">
+          <input pInputText type="text" formControlName="averageCost" placeholder="Average Cost..." />
+        </div>
+        <div class="ui-grid-col-4">
+          <!-- <b-fielderrors [form]="AddTraining" field="name" nicename="Training Name"> </b-fielderrors> -->
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2">
+          Concerned Public
+          <em class="text-danger">*</em>:
+        </div>
+        <div class="ui-grid-col-4">
+          <input pInputText type="text" formControlName="concernedPublic" placeholder="Concerned Public..." />
+        </div>
+        <div class="ui-grid-col-4">
+          <!-- <b-fielderrors [form]="AddTraining" field="name" nicename="Training Name"> </b-fielderrors> -->
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2">
+          Objectives
+          <em class="text-danger">*</em>:
+        </div>
+        <div class="ui-grid-col-4">
+          <input pInputText type="text" formControlName="educationalObjectives" placeholder="Educational Objectives..." />
+        </div>
+        <div class="ui-grid-col-4">
+          <!-- <b-fielderrors [form]="AddTraining" field="name" nicename="Training Name"> </b-fielderrors> -->
+        </div>
+      </div>
+      <div class="ui-grid-row">
+        <div class="ui-grid-col-2"></div>
+        <div class="ui-grid-col-4">
+          <button type="submit" class="btn btn-primary btn-sm" [disabled]="AddTraining.valid">Submit</button>
+          <button type="submit" class="btn btn-danger btn-sm" [routerLink]="['/training']">Cancel</button>
+        </div>
+        <div class="ui-grid-col-4"></div>
+      </div>
+    </div>
+  </p-panel>
+</form>

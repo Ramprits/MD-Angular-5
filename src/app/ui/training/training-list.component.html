@@ -2,7 +2,9 @@
     <p-header>
         <div class="ui-helper-clearfix">
             <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Training</span>
-            <button type="button" class="btn btn-primary waves-light btn-sm" mdbRippleRadius style="float:right" (click)="addTraining()">Add Training</button>
+            <button type="button" class="btn btn-primary waves-light btn-sm" mdbRippleRadius style="float:right" (click)="addTraining()">
+                <i class="fa fa-plus"></i>
+            </button>
         </div>
     </p-header>
     <p-dataTable [value]="trainings" [loading]="loading" loadingIcon="fa-spinner" [responsive]="true" [reorderableColumns]="true"

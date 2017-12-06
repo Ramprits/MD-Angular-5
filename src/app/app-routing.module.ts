@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./ui/home/home.component";
+import { NotFoundComponent } from "./ui/notfound.component";
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "home" },
@@ -12,7 +13,8 @@ const routes: Routes = [
   {
     path: "category",
     loadChildren: "app/ui/category/category.module#CategoryModule"
-  }
+  },
+  { path: "**", pathMatch: "full", component: NotFoundComponent }
 ];
 
 @NgModule({

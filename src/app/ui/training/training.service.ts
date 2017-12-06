@@ -5,7 +5,6 @@ import { Observable } from "rxjs/Observable";
 import "rxjs/add/observable/throw";
 import "rxjs/add/operator/map";
 import "rxjs/add/operator/catch";
-import "rxjs/add/operator/delay";
 import { TrackerError } from "../../shared/tracker.error";
 import { GetTraining } from "./training.model";
 
@@ -14,7 +13,7 @@ export class TrainingService {
   constructor(private httpClient: HttpClient) {}
   GetTrainings(): Observable<GetTraining[] | TrackerError> {
     return this.httpClient
-      .get<GetTraining[] | TrackerError>(`http://localhost:5000/api/trainings`)
+      .get<GetTraining[]>(`http://localhost:5000/api/trainings`)
       .catch(this.handleError);
   }
 

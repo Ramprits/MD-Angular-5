@@ -36,7 +36,7 @@ export class TrainingListComponent implements OnInit {
         this.trainings = training;
       },
       // tslint:disable-next-line:no-console
-      (err: TrackerError) => console.log(err.errorNumber),
+      (err: TrackerError) => console.log(err),
       () => (this.loading = false)
     );
   }

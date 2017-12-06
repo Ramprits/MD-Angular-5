@@ -9,7 +9,7 @@ import { Router } from "@angular/router";
   templateUrl: "training-list.component.html"
 })
 export class TrainingListComponent implements OnInit {
-  trainings: GetTraining[] | TrackerError;
+  trainings: GetTraining[];
   loading = false;
   checked = false;
   isFree = false;
@@ -25,18 +25,16 @@ export class TrainingListComponent implements OnInit {
     try {
       this.GetTrainings();
     } catch (error) {
-      // tslint:disable-next-line:no-console
       console.log(error);
     }
   }
   GetTrainings() {
     this.loading = true;
     this.trainingService.GetTrainings().subscribe(
-      training => {
+      (training: GetTraining[]) => {
         this.trainings = training;
       },
-      // tslint:disable-next-line:no-console
-      (err: TrackerError) => console.log(err),
+      (err: TrackerError) => console.log(err.friendlyMessage),
       () => (this.loading = false)
     );
   }

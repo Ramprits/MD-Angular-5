@@ -14,6 +14,10 @@ const routes: Routes = [
     path: "category",
     loadChildren: "app/ui/category/category.module#CategoryModule"
   },
+  {
+    path: "contact",
+    loadChildren: "app/ui/contact/contact.module#ContactModule"
+  },
   { path: "**", pathMatch: "full", component: NotFoundComponent }
 ];
 

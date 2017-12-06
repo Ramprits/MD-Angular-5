@@ -5,7 +5,10 @@ body {
   margin: 0px;
   font-size: 1em !important;
 }
-
+.fa-refresh {
+  font-size: 150%;
+  color: rgb(87, 93, 119);
+}
 .mt-5 {
   margin-top: 100px !important;
 }
@@ -19,7 +22,7 @@ body {
 /* Spinner */
 
 .spinner {
-  font-size: 300%;
+  font-size: 150%;
   position: absolute;
   top: 50%;
   left: 50%;

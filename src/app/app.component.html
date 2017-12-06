@@ -1,6 +1,6 @@
 <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-primary scrolling-navbar" [containerInside]="false">
   <logo>
-    <a class="logo navbar-brand" href="#">
+    <a class="logo navbar-brand" [routerLink]="['/home']">
       <strong>Saint Gobain Train MI</strong>
     </a>
   </logo>
@@ -38,7 +38,7 @@
 <div class="container mt-5">
   <router-outlet>
     <span class="glyphicon glyphicon-refresh glyphicon-spin spinner" *ngIf="loading">
-      <i class="fa fa-refresh text-primary"></i>
+      <i class="fa fa-refresh"></i>
     </span>
   </router-outlet>
 </div>

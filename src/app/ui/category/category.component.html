@@ -1,17 +1,16 @@
 <div class="row">
     <div *ngFor="let category of categories" class="col-md-4">
-        <div class="view hm-white-slight waves-light" mdbRippleRadius>
-            <img src="../assets/images/{{category.imageUrl}}"  style="width:400px" class="mx-auto d-block" alt="Card image with a tree in a middle of a lake.">
-            <a>
-                <div class="mask"></div>
-            </a>
+        <div class="card mt-2" style="width: 350px; height: 350px;">
+            <div class="view hm-white-slight waves-light" mdbRippleRadius>
+                <img src="../assets/images/{{category.imageUrl}}" style="width:400px" class="mx-auto d-block" alt="Card image with a tree in a middle of a lake.">
+                <a>
+                    <div class="mask"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title"> {{category.name}}</h4>
+            </div>
         </div>
-        <div class="card-body">
-            <h4 class="card-title"> {{category.name}}</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a class="btn btn-primary btn-sm waves-light" mdbRippleRadius>
-                <i class="fa fa-plus"></i>
-            </a>
-        </div>
+
     </div>
 </div>

@@ -8,6 +8,10 @@ const routes: Routes = [
   {
     path: "training",
     loadChildren: "app/ui/training/training.module#TrainingModule"
+  },
+  {
+    path: "category",
+    loadChildren: "app/ui/category/category.module#CategoryModule"
   }
 ];
 

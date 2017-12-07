@@ -17,7 +17,16 @@ export class TrainingService {
       .get<GetTraining[]>(`http://localhost:5000/api/trainings`)
       .catch(this.handleError);
   }
-
+  public GetTrainingAsync() {
+    return this.httpClient
+      .get<any[]>(`http://localhost:5000/api/trainings`)
+      .toPromise()
+      .then(res => <any[]>res.data)
+      .then(training => {
+        return training;
+      })
+      .catch(this.handleError);
+  }
   private handleError(error: HttpErrorResponse): Observable<TrackerError> {
     const dataError = new TrackerError();
     dataError.errorNumber = error.status;

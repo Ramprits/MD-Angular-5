@@ -11,13 +11,17 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppRoutingModule } from "./app-routing.module";
 import { HomeComponent } from "./ui/home/home.component";
 import { NotFoundComponent } from "./ui/notfound.component";
+import { CoreModule } from "./core/core.module";
+import { PanelModule } from "primeng/primeng";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
   imports: [
     BrowserModule,
+    CoreModule,
     BrowserAnimationsModule,
     FormsModule,
+    PanelModule,
     AppRoutingModule,
     HttpModule,
     MDBBootstrapModule.forRoot(),
